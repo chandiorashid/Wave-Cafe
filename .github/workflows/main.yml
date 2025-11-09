@@ -3,8 +3,8 @@ name: Deploy Website
 on:
   push:
     branches:
-      - main  # or 'master' — use the branch where your code lives
-  workflow_dispatch:  # allows manual trigger
+      - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -28,7 +28,7 @@ jobs:
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'  # folder containing index.html and css files
+          path: '.'  
 
   deploy:
     environment:
